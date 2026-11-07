@@ -1,0 +1,23 @@
+### 1. LOGIN (Ejecutá esto primero y copiá el token exacto)
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "messi@bitwars.com",
+    "password": "Argentina2026"
+}
+
+### 2. CREAR PRODUCTO (Pegá el token acá abajo SIN COMILLAS)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZXNzaUBiaXR3YXJzLmNvbSIsImlhdCI6MTc5MzI4MzI2MSwiZXhwIjoxNzkzMzY5NjYxfQ.zUEIoIqAEYmJOQVGu4VupJYpLrINBBvnJAH3n3Tz6CE
+
+{
+    "nombre": "Camiseta Titular Argentina 2026",
+    "descripcion": "Camiseta oficial con tecnología de secado rápido.",
+    "precio": 85000.00,
+    "stock": 50,
+    "categoria": "Camisetas",
+    "imagenPrincipal": "frente.jpg",
+    "imagen360": "camiseta-messi-360.jpg"
+}

@@ -1,0 +1,65 @@
+# ==========================================
+# ARCHIVOS SENSIBLES (¡MUY IMPORTANTE!)
+# ==========================================
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# BACKEND (Java / Spring Boot / Maven)
+# ==========================================
+# Carpeta de compilación de Maven
+backend/target/
+
+# Logs de Spring Boot
+*.log
+
+# Archivos compilados de Java
+*.class
+*.jar
+*.war
+
+# ⚠️ ATENCIÓN EQUIPO: No subir el application.properties real
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-*.properties
+
+# ==========================================
+# FRONTEND (React / Vite / Node.js)
+# ==========================================
+# Dependencias de Node
+frontend/node_modules/
+
+# Carpeta de compilación de Vite
+frontend/dist/
+frontend/dist-ssr/
+
+# Configuración local de Vercel (¡NO borrar vercel.json!)
+.vercel/
+
+# Logs de npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# SISTEMA OPERATIVO Y EDITORES
+# ==========================================
+# Visual Studio Code
+.vscode/
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux (Archivos temporales y de editores)
+*~
+.directory
+.Trash-*

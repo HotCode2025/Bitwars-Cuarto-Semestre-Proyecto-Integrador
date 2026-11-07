@@ -1,0 +1,32 @@
+bitwars-ecommerce/
+│
+├── backend/                  <-- Spring Boot (Java)
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/bitwars/ecommerce/
+│   │   │   │   ├── config/       <-- Seguridad, CORS, MercadoPago, CorreoArg
+│   │   │   │   ├── controllers/  <-- Endpoints REST (Auth, Productos, etc.)
+│   │   │   │   ├── models/       <-- Entidades de la BD (Usuario, Producto, Orden)
+│   │   │   │   ├── repositories/ <-- Interfaces JPA (Neon PostgreSQL)
+│   │   │   │   ├── services/     <-- Lógica de negocio
+│   │   │   │   └── EcommerceApplication.java
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   └── test/
+│   └── pom.xml
+│
+├── frontend/                 <-- React (Vite o Create React App)
+│   ├── public/
+│   │   └── _redirects        <-- Para Netlify (SPA)
+│   ├── src/
+│   │   ├── assets/           <-- Imágenes estáticas (logos)
+│   │   ├── components/       <-- Componentes reutilizables (Navbar, Footer, Cards)
+│   │   ├── context/          <-- Context API (Carrito, Autenticación)
+│   │   ├── pages/            <-- Vistas (Home, Login, Admin, Checkout)
+│   │   ├── services/         <-- Llamadas a la API (Axios)
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md                 <-- Brief del proyecto e instrucciones

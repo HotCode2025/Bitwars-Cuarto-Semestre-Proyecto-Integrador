@@ -1,0 +1,12 @@
+/*
+ * Grupo Bitwars
+ * App.css
+ *
+ * ⚠️ CORRECCIÓN APLICADA:
+ * Este archivo tenía el template por defecto de Vite (`.hero`, `.framework`,
+ * `#next-steps`, `.counter`, etc.) que NO se usaba en el proyecto.
+ * main.jsx solo importa `index.css`, así que este archivo es código muerto.
+ *
+ * Se deja vacío con este comentario para no romper imports accidentales.
+ * Si en el futuro necesitás estilos específicos, agregalos acá.
+ */

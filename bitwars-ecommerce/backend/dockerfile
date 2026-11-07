@@ -1,0 +1,17 @@
+# Etapa 1: Compilación
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
+# Copiamos el pom y descargamos dependencias (esto hace que el deploy sea más rápido si no cambian)
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
+# Copiamos el código y compilamos
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+# Etapa 2: Ejecución
+FROM eclipse-temurin:17-jre-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+# Render usa la variable de entorno PORT, si no existe usamos 8080
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]

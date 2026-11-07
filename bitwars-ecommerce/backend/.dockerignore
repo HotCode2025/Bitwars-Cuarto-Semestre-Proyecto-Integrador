@@ -1,0 +1,57 @@
+# ============================================================
+# Grupo Bitwars — .dockerignore
+# Evita que archivos innecesarios o sensibles entren al build context
+# y a la imagen final. Especialmente importante: .env NUNCA debe
+# viajar dentro de la imagen (se vería con `docker inspect`).
+# ============================================================
+
+# Secretos (CRÍTICO — nunca subir a la imagen)
+.env
+.env.*
+!.env.example
+
+# Build artifacts (el jar se genera dentro del build)
+target/
+build/
+*.jar
+*.war
+*.class
+
+# Maven wrapper y cache local (no aportan al build multietapa)
+.mvn/
+.m2/
+mvnw
+mvnw.cmd
+
+# Git y control de versiones
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.settings/
+.project
+.classpath
+
+# Docker mismo (no hace falta dentro del contexto)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Documentación (no es necesaria dentro del contenedor)
+README.md
+*.md
+docs/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
